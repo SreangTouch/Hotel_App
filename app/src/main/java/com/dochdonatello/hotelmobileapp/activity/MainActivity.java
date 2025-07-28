@@ -18,7 +18,7 @@ import com.dochdonatello.hotelmobileapp.data.local.UserSharePreference;
 
 public class MainActivity extends BaseActivity {
     private ImageView imageView;
-    private Button btnLogout, btnDemoRecyclerView;
+    private Button btnLogout, btnDemoRecyclerView,btnProduct;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,14 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, DemoRecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnProduct = findViewById(R.id.btnProduct);
+        btnProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ProductActivity.class);
                 startActivity(intent);
             }
         });

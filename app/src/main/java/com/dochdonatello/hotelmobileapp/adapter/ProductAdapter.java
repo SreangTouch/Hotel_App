@@ -45,9 +45,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         }
         holder.tvProductPrice.setText("តម្លៃ : "+productsItem.getPrice()+"$");
         //khmer price
-        NumberFormat formatter = NumberFormat.getInstance(new Locale("km", "KH"));
-        double price = Double.parseDouble(productsItem.getPrice().toString());
-        holder.tvProductPrice.setText("តម្លៃ : " + (int)(price * 4010) + " ៛");
+//        NumberFormat formatter = NumberFormat.getInstance(new Locale("km", "KH"));
+//        double price = Double.parseDouble(productsItem.getPrice().toString());
+//        holder.tvProductPrice.setText("តម្លៃ : " + (int)(price * 4010) + " ៛");
         Glide.with(context).load(productsItem.getThumbnail()).into(holder.productImage);
     }
 
